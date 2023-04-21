@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layouts/masterlayout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div class="row" >
+        <div class="col-3" th:each="user:${users}">
+            <div th:insert="~{fragments/myCard::authorCard(${user})}"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
